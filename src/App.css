@@ -1,3 +1,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+@media print {
+    .noprint {
+       visibility: hidden;
+    }
+ }
+
+ @page {
+    size: auto;
+    size: A5;
+    margin: 0mm;
+}

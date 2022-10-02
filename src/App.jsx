@@ -1,13 +1,22 @@
 import { useState } from "react";
 import "./App.css";
 import OtpInput from "./components/OtpInput";
+import createPersistedState from 'use-persisted-state';
+
+const useDeputadoFederal = createPersistedState("deputadoFederal");
+const useDeputadoEstadual = createPersistedState("deputadoEstadual");
+const useSenador = createPersistedState("senador");
+const useGovernador = createPersistedState("governador");
+const usePresidente = createPersistedState("presidente");
+
 
 function App() {
-  const [deputadoFederal, setDeputadoFederal] = useState("");
-  const [deputadoEstadual, setDeputadoEstadual] = useState("");
-  const [senador, setSenador] = useState("");
-  const [governador, setGovernador] = useState("");
-  const [presidente, setPresidente] = useState("");
+  const [deputadoFederal, setDeputadoFederal] = useDeputadoFederal("");
+  const [deputadoEstadual, setDeputadoEstadual] = useDeputadoEstadual("");
+  const [senador, setSenador] = useSenador("");
+  const [governador, setGovernador] = useGovernador("");
+  const [presidente, setPresidente] = usePresidente("");
+
 
   return (
     <div className="mt-16">
@@ -42,7 +51,9 @@ function App() {
               onChange={setPresidente}
             /></div>
 
-          <div className="text-center mt-8"> <button className="btn w-full" type="button" onClick={() =>window.print()}>Gerar Colinha</button></div>
+          <div className="text-center mt-8 noprint"> 
+            <button className="btn w-full" type="button" onClick={() =>window.print()}>Gerar Colinha</button>
+          </div>
         </form>
       </div></div>
   );
