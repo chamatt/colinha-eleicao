@@ -1,0 +1,5 @@
+# gitignore for vite
+# https://vitejs.dev/guide/#why-vite
+node_modules/
+dist
+.DS_Store
