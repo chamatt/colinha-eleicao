@@ -16,7 +16,7 @@ function App() {
           <div className="mb-4">
             <h3 className="mb-2">DEPUTADO ESTADUAL</h3>
             <OtpInput
-              valueLength={5}
+              valueLength={4}
               value={deputadoFederal}
               onChange={setDeputadoFederal}
             />
