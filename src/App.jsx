@@ -14,14 +14,14 @@ function App() {
       <div className="w-full">
         <form className="mx-auto  max-w-xs">
           <div className="mb-4">
-            <h3 className="mb-2">DEPUTADO ESTADUAL</h3>
+            <h3 className="mb-2">DEPUTADO FEDERAL</h3>
             <OtpInput
               valueLength={4}
               value={deputadoFederal}
               onChange={setDeputadoFederal}
             />
           </div> <div className="mb-4">
-            <h3 className="mb-2">DEPUTADO FEDERAL</h3>
+            <h3 className="mb-2">DEPUTADO ESTADUAL</h3>
             <OtpInput
               valueLength={5}
               value={deputadoEstadual}
